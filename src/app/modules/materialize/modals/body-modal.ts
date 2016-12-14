@@ -64,7 +64,7 @@ export class BodyModalComponent extends MaterializeModal {
         let codeElement: any = $(this.el.nativeElement).find('pre code');
         this.openModal(event);
         this.zone.run(() => {
-            if (!_.isEmpty(this.apiResult.message)) {
+            //if (!_.isEmpty(this.apiResult.message)) {
                 if (this.operation.isProduceJson()) {
                     codeElement.html(hljs.highlight('json', JSON.stringify(this.apiResult.message, null, 4)).value);
                 } else if (this.operation.isProduceXml()) {
@@ -72,7 +72,7 @@ export class BodyModalComponent extends MaterializeModal {
                 } else {
                     codeElement.text(this.apiResult.message);
                 }
-            }
+            //}
         });
     }
     getFullUrl(): string {

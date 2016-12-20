@@ -21,6 +21,7 @@ You can try with your Swagger 2 api by setting the url under the "Settings" menu
 - Detailed model and sub models information: fields name, types, etc...
 - Charts displaying requests time
 - Possibility to compare statistics from one api to another
+- Possibility to switch between two css themes (settings page)
 
 # Screenshots
 ![image](http://i.imgur.com/2aXJ3TK.png?1)
@@ -37,7 +38,7 @@ Tested on the following browsers:
 - Internet Explorer 11
 
 # Stack
-- [Angular 2.0.0](https://angular.io)
+- [Angular 2.2.1](https://angular.io)
 - [MaterializeCSS](http://materializecss.com)
 - [ChartJS](http://www.chartjs.org/)
 - Webpack
@@ -53,10 +54,12 @@ Tested on the following browsers:
 		-- boot.ts: Angular2 entry point
 		-- app.component.ts: Booststrap component
 		-- app.html: Bootsrap html
-		-- directives: Angular 2 directives
+		-- modules: Angular 2 modules
+		    -- app: application components (home, header and settings page)
+		    -- main: Api List and api detail page, left menu
+		    -- materialize: MaterializeCSS components (modals, inputs, etc..)
 		-- services: Angular 2 services
 		-- model: Swagger api typescript definition
-		-- components: Main components
 		-- pipes: Angular2 @Pipe components
 		-- utils: Utility classes
     -- assets: Assets folder
@@ -66,7 +69,7 @@ Tested on the following browsers:
 - node_modules (not in git repository): NPM dependencies
 - karma.conf.js: Karma configuration file for unit tests (not yet)
 - webpack.test.config.js: Build configuration file used for unit tests (not yet)
-- webpack.config.js: Build configuration file
+- webpack.config.old.js: Build configuration file
 - tsconfig.json: TypeScript configuration file
 - tslint.json: TSLint configuration file
 - typings.json: Typings configuration file
@@ -93,9 +96,9 @@ To build the project:
 $ npm run build
 ```
 
-# Contributing
-* Unit tests need to be fixed with Angular 2.0.0 version. Your help is welcome.
-
 # Contributors
 
 * Maximilian Hengelein ([@mhengelein](https://github.com/mhengelein))
+* Francesco Soncina ([@phra](https://github.com/phra))
+* Sahlikhouloud ([@Sahlikhouloud](https://github.com/Sahlikhouloud))
+* Wiem Zine El Abidine ([@wi101](https://github.com/wi101))

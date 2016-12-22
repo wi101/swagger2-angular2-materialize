@@ -66,15 +66,13 @@ export class BodyModal extends MaterializeModal {
         {
             ready: () => {
                 this.zone.run(() => {
-                    if (!_.isEmpty(this.apiResult.message)) {
                         if (this.operation.isProduceJson()) {
                             codeElement.html(hljs.highlight('json', JSON.stringify(this.apiResult.message,null,4)).value);
                         } else if(this.operation.isProduceXml()){
                             codeElement.text(vkbeautify.xml(this.apiResult.message));
                         } else {
                             codeElement.text(this.apiResult.message);
-                        }
-                    }
+                        }               
                 });
             }
         });
